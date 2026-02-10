@@ -259,7 +259,7 @@ export default function SiftAwayScreen() {
 
   /**
    * This method has not been implemented yet.
-   * Once used it will remove a track from the current playlist.
+   * Once it works the method will be implemented
    * only going to implement this IF this app gets like popular (it will not)
    * 
    * @param {*} track 
@@ -267,7 +267,7 @@ export default function SiftAwayScreen() {
   const removeTrack = async (track) => {
   console.log("Track received in removeTrack:", track);
   if (!track) {
-    console.error("❌ No track passed in!");
+    console.error("No track passed in!");
     return;
   }
 
@@ -291,7 +291,7 @@ export default function SiftAwayScreen() {
     // Update local state so UI matches
     setTracks((prevTracks) => prevTracks.filter((t) => t.id !== track.id));
 
-    console.log(`✅ Removed: ${track.name}`);
+    console.log('Removed: ${track.name}`);
   } catch (err) {
     console.error("Failed to remove track:", err);
   }
